@@ -9,14 +9,14 @@ import { Recipe } from 'src/app/core/models/recipe.model'
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
     new Recipe(
-      'Test',
-      'This is a test recipe',
-      'https://upload.wikimedia.org/wikipedia/commons/3/39/Recipe.jpg'
+      'Gyudon',
+      'A delicious beef and rice bowl',
+      'https://upload.wikimedia.org/wikipedia/commons/0/04/Gyudon_by_jetalone_in_Higashi-Ginza%2C_Tokyo.jpg'
     ),
     new Recipe(
-      'Test',
-      'This is a test recipe',
-      'https://upload.wikimedia.org/wikipedia/commons/3/39/Recipe.jpg'
+      'Udon',
+      'A traditional noodle dish',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Udon-M1336.jpg/800px-Udon-M1336.jpg'
     ),
   ]
 
