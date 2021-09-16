@@ -8,12 +8,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Objectives
 
-This project is part of an introduction to Angular 12 framework and should cover the basics on Angular core concepts such as Components, Data Binding, Debugging, Directives, Services, Dependency Injection, Routing, Forms and so on. Some personal tweaks of my choise and learning necessity may be present, so this may be close to the instructor final code but not entirely. 
+This project is part of an introduction to Angular 12 framework and should cover the basics on Angular core concepts such as Components, Data Binding, Debugging, Directives, Services, Dependency Injection, Routing, Forms and so on. Some personal tweaks of my choise and learning necessity may be present, so this may be close to the instructor final code but not entirely.
 
 ## Stories
 
 ☑ - The Basics<br>
-☐ - Directives<br>
+☑ - Directives<br>
 ☐ - Services<br>
 ☐ - Routing<br>
 ☐ - Observables<br>
