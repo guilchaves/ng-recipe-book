@@ -15,4 +15,12 @@ export class ShoppingListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  /**
+   * This method is triggered when the ingredientAdded event is emitted.
+   * @param ingredient The Ingredient object from the child's component EventEmitter.
+   */
+  onIngredientAdded(ingredient: Ingredient) {
+    this.ingredients.push(ingredient)
+  }
 }
