@@ -25,6 +25,12 @@ export class RecipeListComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  /**
+   * This method emits a recipe received from another component
+   * to it's listener on recipesComponent.
+   *
+   * @param recipe Recipe emitted from the recipeItemComponent.
+   */
   onRecipeSelected(recipe: Recipe) {
     this.recipeWasSelected.emit(recipe)
   }
