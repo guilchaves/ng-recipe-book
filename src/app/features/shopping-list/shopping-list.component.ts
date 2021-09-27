@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Ingredient } from './models/ingredient.model'
+import { ShoppingListService } from './services/shopping-list.service'
 
 @Component({
   selector: 'app-shopping-list',
@@ -7,20 +8,23 @@ import { Ingredient } from './models/ingredient.model'
   styleUrls: ['./shopping-list.component.scss'],
 })
 export class ShoppingListComponent implements OnInit {
-  public ingredients: Ingredient[] = [
-    new Ingredient('Apples', 5),
-    new Ingredient('Shoyu', 3),
-  ]
+  public ingredients: Ingredient[] = []
 
-  constructor() {}
+  constructor(private shoppingListService: ShoppingListService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.ingredients = this.shoppingListService.getIngredients()
+    this.shoppingListService.ingredientsChanged.subscribe((ingredients: Ingredient[]) => {
+      this.ingredients = ingredients
+    })
+  }
 
   /**
    * This method is triggered when the ingredientAdded event is emitted.
    * @param ingredient The Ingredient object from the child's component EventEmitter.
    */
-  onIngredientAdded(ingredient: Ingredient) {
-    this.ingredients.push(ingredient)
-  }
+  // onIngredientAdded(ingredient: Ingredient) {
+  //   this.ingredients.push(ingredient)
+  //   this.shoppingListService.addIngredient(ingredient)
+  // }
 }
