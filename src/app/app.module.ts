@@ -16,6 +16,7 @@ import { AppComponent } from './app.component'
     RecipesModule,
     ShoppingListModule,
     CoreModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
