@@ -7,7 +7,8 @@ import { RecipeListComponent } from './components/recipe-list/recipe-list.compon
 import { RecipesComponent } from './recipes.component'
 import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.component'
 import { RecipeItemComponent } from './components/recipe-list/recipe-item/recipe-item.component'
-import { RecipeStartComponent } from './components/recipe-start/recipe-start.component'
+import { RecipeStartComponent } from './components/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './components/recipe-edit/recipe-edit.component'
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RecipeStartComponent } from './components/recipe-start/recipe-start.com
     RecipeDetailComponent,
     RecipeItemComponent,
     RecipeStartComponent,
+    RecipeEditComponent,
   ],
   imports: [CommonModule, SharedModule, RouterModule],
   exports: [
