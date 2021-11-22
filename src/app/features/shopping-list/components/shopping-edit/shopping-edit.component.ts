@@ -1,4 +1,5 @@
 import { Component, ElementRef, EventEmitter, OnInit, Output } from '@angular/core'
+import { NgForm } from '@angular/forms'
 import { Ingredient } from '../../models/ingredient.model'
 import { ShoppingListService } from '../../services/shopping-list.service'
 
@@ -27,9 +28,12 @@ export class ShoppingEditComponent implements OnInit {
    * @param name The value from nameInput property
    * @param amount The value from amountInput property
    */
-  onAddItem(name: string, amount: number): void {
+  onAddItem(form: NgForm): void {
     //  const name = this.nameInputRef.nativeElement.value
     //  const amount = this.amountInputRef.nativeElement.value
-    this.shoppingListService.addIngredient(new Ingredient(name, amount))
+    //this.shoppingListService.addIngredient(new Ingredient(name, amount))
+    const value = form.value
+    const newIngredient = new Ingredient(value.name, value.amount)
+    this.shoppingListService.addIngredient(newIngredient)
   }
 }
