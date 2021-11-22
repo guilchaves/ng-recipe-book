@@ -27,6 +27,10 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe()
   }
 
+  onEditItem(index: number) {
+    this.shoppingListService.startedEditing.next(index)
+  }
+
   /**
    * This method is triggered when the ingredientAdded event is emitted.
    * @param ingredient The Ingredient object from the child's component EventEmitter.

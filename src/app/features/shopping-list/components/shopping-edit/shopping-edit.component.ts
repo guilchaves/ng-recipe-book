@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, OnInit, Output } from '@angular/core'
 import { NgForm } from '@angular/forms'
+import { Subscription } from 'rxjs'
 import { Ingredient } from '../../models/ingredient.model'
 import { ShoppingListService } from '../../services/shopping-list.service'
 
@@ -19,8 +20,22 @@ export class ShoppingEditComponent implements OnInit {
   //@Output() ingredientAdded = new EventEmitter<Ingredient>()
 
   constructor(private shoppingListService: ShoppingListService) {}
+  subscription: Subscription
+  editMode = false
+  editedItemIndex: number
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.subscription = this.shoppingListService.startedEditing.subscribe(
+      (index: number) => {
+        this.editedItemIndex = index
+        this.editMode = true
+      }
+    )
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe()
+  }
 
   /**
    * This method would not receive any params if the @ViewChild approach was used.
