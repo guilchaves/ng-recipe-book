@@ -57,7 +57,7 @@ export class ShoppingEditComponent implements OnInit {
    * @param name The value from nameInput property
    * @param amount The value from amountInput property
    */
-  onAddItem(form: NgForm): void {
+  onSubmit(form: NgForm): void {
     //  const name = this.nameInputRef.nativeElement.value
     //  const amount = this.amountInputRef.nativeElement.value
     //this.shoppingListService.addIngredient(new Ingredient(name, amount))
@@ -68,5 +68,7 @@ export class ShoppingEditComponent implements OnInit {
     } else {
       this.shoppingListService.addIngredient(newIngredient)
     }
+    this.editMode = false
+    form.reset()
   }
 }
