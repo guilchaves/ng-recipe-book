@@ -14,11 +14,15 @@ This project is part of an introduction to Angular 12 framework and should cover
 
 ☑ - The Basics<br>
 ☑ - Directives<br>
-☐ - Services<br>
-☐ - Routing<br>
-☐ - Observables<br>
-☐ - Forms<br>
+☑ - Services<br>
+☑ - Routing<br>
+☑ - Observables<br>
+☑ - Forms<br>
+☐ - Pipes<br>
 ☐ - Http<br>
+☐ - Authentication & Route Protection<br>
+☐ - Angular Modules & Optimization<br>
+☐ - Deploy<br>
 
 ## Development server
 
