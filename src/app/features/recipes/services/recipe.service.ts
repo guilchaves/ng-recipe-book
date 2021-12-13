@@ -12,20 +12,22 @@ export class RecipeService {
   //recipeSelected = new Subject<Recipe>()
   recipesChanged = new Subject<Recipe[]>()
 
-  private recipes: Recipe[] = [
-    new Recipe(
-      'Gyudon',
-      'A delicious beef and rice bowl',
-      'https://upload.wikimedia.org/wikipedia/commons/0/04/Gyudon_by_jetalone_in_Higashi-Ginza%2C_Tokyo.jpg',
-      [new Ingredient('Beef', 1), new Ingredient('Rice', 2)]
-    ),
-    new Recipe(
-      'Udon',
-      'A traditional noodle dish',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Udon-M1336.jpg/800px-Udon-M1336.jpg',
-      [new Ingredient('Noodles', 1), new Ingredient('Fish Stock', 1)]
-    ),
-  ]
+  private recipes: Recipe[] = []
+
+  // private recipes: Recipe[] = [
+  //   new Recipe(
+  //     'Gyudon',
+  //     'A delicious beef and rice bowl',
+  //     'https://upload.wikimedia.org/wikipedia/commons/0/04/Gyudon_by_jetalone_in_Higashi-Ginza%2C_Tokyo.jpg',
+  //     [new Ingredient('Beef', 1), new Ingredient('Rice', 2)]
+  //   ),
+  //   new Recipe(
+  //     'Udon',
+  //     'A traditional noodle dish',
+  //     'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Udon-M1336.jpg/800px-Udon-M1336.jpg',
+  //     [new Ingredient('Noodles', 1), new Ingredient('Fish Stock', 1)]
+  //   ),
+  // ]
 
   constructor(private shoppingListService: ShoppingListService) {}
 
