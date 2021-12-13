@@ -18,8 +18,8 @@ This project is part of an introduction to Angular 12 framework and should cover
 ☑ - Routing<br>
 ☑ - Observables<br>
 ☑ - Forms<br>
-☐ - Pipes<br>
-☐ - Http<br>
+☑ - Pipes<br>
+☑ - Http Requests<br>
 ☐ - Authentication & Route Protection<br>
 ☐ - Angular Modules & Optimization<br>
 ☐ - Deploy<br>
