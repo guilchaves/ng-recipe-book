@@ -7,6 +7,6 @@ import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [DropdownDirective],
   imports: [CommonModule, HttpClientModule],
-  exports: [DropdownDirective],
+  exports: [DropdownDirective, HttpClientModule],
 })
 export class SharedModule {}
