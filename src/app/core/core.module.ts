@@ -5,10 +5,11 @@ import { SharedModule } from '../shared/shared.module'
 
 import { HeaderComponent } from './components/header/header.component'
 import { AuthComponent } from './components/auth/auth.component'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [HeaderComponent, AuthComponent],
-  imports: [CommonModule, AppRoutingModule, SharedModule],
+  imports: [CommonModule, AppRoutingModule, SharedModule, FormsModule],
   exports: [HeaderComponent],
 })
 export class CoreModule {}
