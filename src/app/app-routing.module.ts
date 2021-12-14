@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 
+import { AuthComponent } from './core/components/auth/auth.component'
 import { RecipeDetailComponent } from './features/recipes/components/recipe-detail/recipe-detail.component'
 import { RecipeEditComponent } from './features/recipes/components/recipe-edit/recipe-edit.component'
 import { RecipeStartComponent } from './features/recipes/components/recipe-start/recipe-start.component'
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'shopping-list',
     component: ShoppingListComponent,
+  },
+  {
+    path: 'auth',
+    component: AuthComponent,
   },
 ]
 
