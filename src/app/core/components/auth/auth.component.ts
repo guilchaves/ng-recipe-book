@@ -11,6 +11,7 @@ import { AuthService } from '../../services/auth.service'
 export class AuthComponent {
   isLoginMode: boolean = true
   isLoading: boolean = false
+  error: string = null
 
   constructor(private authService: AuthService) {}
 
@@ -38,6 +39,7 @@ export class AuthComponent {
         },
         err => {
           console.log(err)
+          this.error = 'An error occurred'
           this.isLoading = false
         }
       )
