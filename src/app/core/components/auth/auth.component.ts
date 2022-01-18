@@ -1,7 +1,8 @@
 import { createNgModuleType } from '@angular/compiler/src/render3/r3_module_compiler'
 import { Component } from '@angular/core'
 import { NgForm } from '@angular/forms'
-import { AuthService } from '../../services/auth.service'
+import { Observable } from 'rxjs'
+import { AuthResponseData, AuthService } from '../../services/auth.service'
 
 @Component({
   selector: 'app-auth',
@@ -29,21 +30,25 @@ export class AuthComponent {
 
     this.isLoading = true
 
+    let authObs: Observable<AuthResponseData>
+
     if (this.isLoginMode) {
-      //...
+      authObs = this.authService.login(email, password)
     } else {
-      this.authService.signup(email, password).subscribe(
-        resData => {
-          console.log(resData)
-          this.isLoading = false
-        },
-        err => {
-          console.log(err)
-          this.error = 'An error occurred'
-          this.isLoading = false
-        }
-      )
+      authObs = this.authService.signup(email, password)
     }
+
+    authObs.subscribe(
+      resData => {
+        console.log(resData)
+        this.isLoading = false
+      },
+      errorMessage => {
+        console.log(errorMessage)
+        this.error = errorMessage
+        this.isLoading = false
+      }
+    )
 
     form.reset()
   }
