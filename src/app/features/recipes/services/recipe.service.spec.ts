@@ -48,7 +48,6 @@ describe('RecipeService', () => {
 
     //chamando um método antes de testar?
     recipeService.setRecipes(recipes)
-    //spyOn(recipeService, 'setRecipes')
   })
 
   //repensar

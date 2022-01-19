@@ -12,14 +12,14 @@ describe('ShoppingListService', () => {
     shoppingListService = TestBed.inject(ShoppingListService)
   })
 
-  it('should retrive all ingredients', () => {
+  it('should retrieve all ingredients', () => {
     let result = shoppingListService.getIngredients()
 
     expect(result).toBeTruthy()
     expect(result.length).toBe(2)
   })
 
-  it('should retrive one ingredient', () => {
+  it('should retrieve one ingredient', () => {
     let result = shoppingListService.getIngredient(1)
     expect(result).toBeTruthy()
     expect(result.name).toEqual('Shoyu')
